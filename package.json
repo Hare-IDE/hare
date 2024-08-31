@@ -1,5 +1,5 @@
 {
-  "name": "@Hare-IDE/hare",
+  "name": "@hare-ide/hare",
   "version": "1.0.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@Hare-IDE"
@@ -19,7 +19,8 @@
     "test-watch": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "npm run build"
   },
   "keywords": [],
   "author": "",
