@@ -2,7 +2,7 @@
   "name": "@hare-ide/hare",
   "version": "0.0.1",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@Hare-IDE"
+    "registry": "https://npm.pkg.github.com/@hare-ide"
   },
   "type": "module",
   "main": "dist/index.cjs.js",
