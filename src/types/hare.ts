@@ -1,6 +1,7 @@
 export interface IHareIcon {
   light: string;
   dark: string;
+  when?: string;
 }
 
 export interface IHareCommand {
@@ -38,7 +39,7 @@ export interface IHareViewContainers {
 
 export interface View {
   id: string;
-  parentId?: string;
+  parent?: string;
   // icon: string; //TODO: should be svg
   title: string;
   when: string;
@@ -46,6 +47,12 @@ export interface View {
 
 export interface IHareView extends View {
   viewProvider: TreeViewProvider<any> | undefined;
+}
+
+export interface IHareIconPack {
+  id: string,
+  title: string,
+  path: string,
 }
 
 export type ProviderResult<T> =
@@ -159,4 +166,24 @@ export enum TreeItemState {
 export enum TreeItemSelectedState {
   Unselected,
   selected,
+}
+
+export interface ExtensionContext {
+  readonly root: string;
+  readonly id: string;
+  readonly version: string;
+  readonly name: string;
+  readonly main?: string;
+  readonly description: string;
+  source: Promise<any> | null;
+
+  commands: any;
+  window: any;
+  subscriptions: any;
+  project: any;
+  extension: any; // Instance of the extension
+  disposables: any; // Class that will manage things to be removed when deactivated
+  readDir: Function; // TODO: temporary
+
+  getAbsolutePath: Function;
 }
