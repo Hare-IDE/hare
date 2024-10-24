@@ -7,8 +7,10 @@ export interface IHareIcon {
 export interface IHareCommand {
   id: string;
   title: string;
-  icon: IHareIcon | null;
-  callback: Function | null;
+  icon?: IHareIcon | string,
+  category?: string,
+  when?: string,
+  callback?: Function;
 }
 
 export interface Command {
@@ -178,7 +180,7 @@ export interface ExtensionContext {
   window: any;
   subscriptions: any;
   project: any;
-  extension: any; // Instance of the extension
+  context: any;
   disposables: any; // Class that will manage things to be removed when deactivated
   readDir: Function; // TODO: temporary
 
