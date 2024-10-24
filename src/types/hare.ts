@@ -104,7 +104,7 @@ export class TreeItem {
    * something in the editor. Using these commands ensures that the resulting editor will
    * appear consistent with how other built-in trees open editors.
    */
-  command?: Command; //TODO
+  command?: string; //TODO
 
   /**
    * {@link TreeItemCollapsibleState} of the tree item.
