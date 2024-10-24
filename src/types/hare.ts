@@ -67,9 +67,6 @@ export interface TreeViewProvider<T> {
 
   getChildren(element?: T): ProviderResult<T[]>;
   getTreeItem(element: T): TreeItem | PromiseLike<TreeItem>;
-
-  selectedCallback: Function;
-  selected: string[]; // Id string
 }
 
 export class TreeItem {
